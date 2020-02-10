@@ -1,0 +1,54 @@
+.child {
+
+}
+#parentDiv {
+    background-color: #8787ff;
+    padding: 35px;
+    width: 50%;
+    position: static;
+    margin: auto;
+    text-align: center;
+}
+
+/*@media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }*/
+
+
+#parentDiv h1 {
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.firstChild {
+    background-color:#ffffff;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.secondChild {
+
+    background-color:#ff9800;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: sans-serif;
+
+}
+
+.thirdChild {
+
+    background-color:#ff5722;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: sans-serif;
+
+
+}

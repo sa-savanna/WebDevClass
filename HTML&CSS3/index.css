@@ -1,0 +1,50 @@
+
+#block-1
+{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 10px;
+  left: 10px;
+  background-color: #999;
+  z-index: 1;
+}
+#inner-block
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: #ff0909;
+  z-index: 100;
+}
+#block-2
+{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 60px;
+  left: 60px;
+  background-color: hsla(36, 100%, 50%, 1);
+  z-index: 2;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    height: 30px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background-color: blue;
+}
+
+.content {
+    position: relative;
+    bottom: -5em;
+    width: 30%;
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0 auto;
+    z-index: -1;
+    overflow-x: hidden;
+}
