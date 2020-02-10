@@ -23,3 +23,8 @@
 * git commit -m "commitMessage"
 * git add remote origin https://github.com/injecti0n/WebDevClass
 * git push -u origin master
+
+# Github Update of Repo
+* git add * (or single file which is updated)
+* git commit -m "commit Message"
+* git push -u origin master
