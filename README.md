@@ -1,1 +1,8 @@
 # WebDevClass
+
+- HTML & CSS3
+- BOOTSTRAP 4
+- SASS
+- JAVASCRIPT
+- REACTJS
+- NODEJS
