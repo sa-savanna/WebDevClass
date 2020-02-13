@@ -9,3 +9,10 @@
 - jumbotron
 - alert
 - buttons
+- button groups
+- badges
+- progress bars
+- cards
+- collapse
+- nav, navbar
+- carousel
