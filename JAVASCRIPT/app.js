@@ -1,13 +1,6 @@
-
 function doIt() {
+    var myInputValue = document.getElementById('myInput').value;
+    var myResult = document.getElementById('result');
+    return myResult.innerText = myInputValue;
     
-    var userInput = document.getElementById('myInput').value;
-    var yourName = document.getElementById('yourName').innerHTML=userInput;
-    return yourName;
-
 }
-
-
-var myString = new String("Atilla");
-var myString = new String("Atilla");
-var myString = new String("Atilla");
