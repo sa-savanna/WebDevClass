@@ -25,7 +25,7 @@
         - Array Iteration
         - Date Objects
 
-    * 26/02/2020
+    * 27/02/2020
         - Date Formats
         - Date Get Methods
         - Date Set Methods
