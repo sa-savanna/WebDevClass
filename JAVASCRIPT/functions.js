@@ -23,8 +23,10 @@ function findBiggestNumber(x,y){
 console.log(findBiggestNumber(50,90));
 
 
-/*https://www.teaching-materials.org/javascript/exercises/functions
-https://www.w3resource.com/javascript-exercises/*/
+/*
+https://www.teaching-materials.org/javascript/exercises/functions
+https://www.w3resource.com/javascript-exercises/
+*/
 
 
 // Local Variables
