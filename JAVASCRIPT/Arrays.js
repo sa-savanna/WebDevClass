@@ -40,27 +40,36 @@ var student = {
 
 var myRecords = [
 
-student1 : {
-	name:"Jack",
+{
+	name:"Narine",
+	familyname:"Sparrow",
+	job:"Pirate",
+	country:"Armenia"
+},
+{
+	name:"Merlin",
 	familyname:"Sparrow",
 	job:"Pirate",
 	country:"England"
 },
-student1 : {
-	name:"Jack",
+{
+	name:"Anna",
 	familyname:"Sparrow",
 	job:"Pirate",
-	country:"England"
-},
-student1 : {
-	name:"Jack",
-	familyname:"Sparrow",
-	job:"Pirate",
-	country:"England"
-},
+	country:"Ukraine"
+}
 
 ]
-
-
 // console.log(student.name, student.familyname, student.job)
+/*
 
+var myarr=['a','b','c']
+const check = myarr.reduce((accumulator, item)=>{
+	accumulator += item,0;
+})
+
+console.log(check)*/
+
+myRecords.forEach(element=>{
+	console.log(element.country)
+})
