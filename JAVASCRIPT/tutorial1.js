@@ -210,3 +210,5 @@ if( typeof userInput === "string"){
 }else{
 	console.log("Ok. This is an integer.")
 }
+
+
