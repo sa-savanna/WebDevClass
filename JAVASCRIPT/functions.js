@@ -23,16 +23,36 @@ function findBiggestNumber(x,y){
 console.log(findBiggestNumber(50,90));
 
 
-https://www.teaching-materials.org/javascript/exercises/functions
-https://www.w3resource.com/javascript-exercises/
+/*https://www.teaching-materials.org/javascript/exercises/functions
+https://www.w3resource.com/javascript-exercises/*/
 
 
 // Local Variables
+function Example(){
+	var ThisIsLocalVariable = 'ThisIsLocalVariable';
+	console.log( ThisIsLocalVariable);
+}
+Example();
+function Example1(){
+	// console.log( ThisIsLocalVariable);
+}
 
-
-
+Example1();
 // Global Variables
 
+var GlobalVariable = 'GlobalVariable';
+
+function Example2(){
+	console.log(GlobalVariable);
+}
+
+Example2();
+
+function Example3(){
+	console.log(GlobalVariable)
+}
+
+Example3();
 
 /*
 
