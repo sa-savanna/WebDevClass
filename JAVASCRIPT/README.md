@@ -14,15 +14,4 @@
 - Function {nested, with params}
 - Events {onClick, onChange,onmouseover,onmouseout,onload}
 
-* Next Week
-    * 24/02/2020
-        - Strings and Strings Method
 
-  
-
-    * 25/02/2020
-        - Numbers and Number Method
-  
-
-    * 27/02/2020
-      - Arrays and Array Methods
