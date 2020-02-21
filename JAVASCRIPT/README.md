@@ -10,9 +10,9 @@
 - Logical operators
 - Type operators
 - Data types = {number,string,boolean,Array}
-- Objects
-- Function
-- Events {onClick, onChange}
+- Objects {string,boolean,array,date}
+- Function {nested, with params}
+- Events {onClick, onChange,onmouseover,onmouseout,onload}
 
 * Next Week
     * 24/02/2020
