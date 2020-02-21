@@ -7,5 +7,16 @@ onkeydown	The user pushes a keyboard key
 onload	The browser has finished loading the page
 */
 
+var result = document.getElementById('test'); // global variable
+
+function getMessage(){
+    // onload event
+    var showTime = new Date();
+    alert('Welcome to my site\n' + showTime);
+}
+
+function whenMouseOvermyItem(){
+    return result.innerHTML="This is onmouseover event";
+}
 
 
