@@ -14,18 +14,4 @@
 - Function {nested, with params}
 - Events {onClick, onChange,onmouseover,onmouseout,onload}
 
-* Next Week
-    * 24/02/2020
-        - Strings and Strings Method
-        - Numbers and Number Method
-        - Arrays and Array Methods
 
-    * 25/02/2020
-        - Array Sort
-        - Array Iteration
-        - Date Objects
-
-    * 27/02/2020
-        - Date Formats
-        - Date Get Methods
-        - Date Set Methods
