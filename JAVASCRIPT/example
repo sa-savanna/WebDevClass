@@ -1,0 +1,12 @@
+// a global variable 
+var age;
+// function with one parameter
+console.log(greeting('Atilla')); // print out 
+
+// "Hello Atilla, Welcome to My page"
+your age is 19.
+
+
+function a (name,Age){
+	age = Age;
+}
