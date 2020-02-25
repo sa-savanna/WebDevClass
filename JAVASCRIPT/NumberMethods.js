@@ -40,3 +40,5 @@ function fixedTheSalary(Salary){
 }
 
 console.log(fixedTheSalary(user))
+
+
