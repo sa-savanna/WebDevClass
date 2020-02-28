@@ -112,7 +112,11 @@ header h2:hover {
     height: 20px;
     width: 100%;
     background-color: blueviolet;
-    position: fixed;
+    position: sticky;
     top: 0px;
     margin: 0 auto;
+}
+
+.menu ul li {
+    list-style-type: none;
 }
