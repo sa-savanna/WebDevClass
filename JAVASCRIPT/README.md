@@ -10,8 +10,12 @@
 - Logical operators
 - Type operators
 - Data types = {number,string,boolean,Array}
-- Objects {string,boolean,array,date}
+- Objects {string,boolean,array,date,math}
+- JS Random
+- JS Array Iteration {Array.forEach, Array.map, Array.filter, Array.reduce,Array.indexOf}
 - Function {nested, with params}
-- Events {onClick, onChange,onmouseover,onmouseout,onload}
-
-
+- Events {onClick, onChange,onmouseover,onmouseout,onload, addEventListener}
+- Conditional statements {if, else, else if, switch}
+- Loop For {for,}
+- JS Break
+- JS Type conversion
