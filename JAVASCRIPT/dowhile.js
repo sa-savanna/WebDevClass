@@ -26,7 +26,7 @@ console.log(i);
 */
 var number;
 var sum=0;
-
+/*
 do{ // repeats until return true
 	number=parseInt(prompt('enter number'));
 	sum+=number;
@@ -35,3 +35,5 @@ do{ // repeats until return true
 }while(number!=0);
 
 document.write(sum)
+
+*/
