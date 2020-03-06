@@ -1,18 +1,37 @@
-var i=0;
-var sword = document.getElementById("sword");
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+// do while
 
-function getRandom10(min, max) {
-  return getRandomInt(min / 10, max / 10) * 10;
-}
+var i = 0;
+/*
+/*
+do {
+// programming code
 
-for(i;i<10;i++){
-	console.log(getRandom10(110,170))
-	var degisken = getRandom10(110,170)+"deg";
-	var animation = `rotate(${getRandom10(150,280)}deg)`;
-	sword.style.transform = animation;
-	console.log(animation);
-	
-}
+}while(condition)*/
+
+/*
+do{
+	console.log(i);
+	i++;
+}while(i<=10);
+
+*/
+/*
+do{
+	var test = Math.floor(Math.random() * Math.floor(100));
+	i++;
+}while(test!=50);
+
+console.log(i);
+
+*/
+var number;
+var sum=0;
+
+do{ // repeats until return true
+	number=parseInt(prompt('enter number'));
+	sum+=number;
+	console.log(sum)
+	console.log(number)
+}while(number!=0);
+
+document.write(sum)
