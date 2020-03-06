@@ -1,0 +1,15 @@
+$backgroundColor1 : "#000000";
+$ImgUrl : "https://i.imgur.com/iMbbJcF.jpg";
+$backgroundImage : url($ImgUrl);
+$height:20vw;
+$position: "center";
+$repeat: "no-repeat";
+$size: "cover";
+
+#slider {
+    background-image: $backgroundImage;
+    height: $height;
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $size;
+}
