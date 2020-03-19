@@ -4,6 +4,7 @@ const todoForm = document.querySelector('#todo-form');
 const todoList = document.querySelector('.list-group');
 const firstCardBody = document.querySelectorAll('.card-body')[0]
 const cardHeader = document.querySelector('.card-header');
+const clearButton = document.querySelector("#clear-todos")
 EventListeners();
 
 function CreateElement(tagName) {
@@ -15,6 +16,14 @@ function CreateElement(tagName) {
 function EventListeners() {
     todoInput.addEventListener('keyup',function(event){
         cardHeader.innerHTML= todoInput.value;
+    })
+    clearButton.addEventListener("click", (e) => {
+        if (confirm("Are you sure to delete all todos?")) {
+            while (todoList.firstElementChild != null) {
+                todoList.removeChild(todoList.firstElementChild)
+            }
+            
+        }
     })
     todoForm.addEventListener('click', addToDo)
     todoList.addEventListener('click', removeElement)
