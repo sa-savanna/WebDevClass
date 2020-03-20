@@ -53,10 +53,14 @@ function filterTodos(event){
     const listTodos = document.querySelectorAll('.list-group-item');
     listTodos.forEach(function(todo){
         const todoTitle = todo.textContent.toLowerCase();
+        console.log(todoTitle.indexOf(filterValue)===-1);
         if(todoTitle.indexOf(filterValue)===-1){
-            todo.setAttribute('style','display:none !important');
+            console.log('1=',todoTitle,'2=',filterValue)
+            todo.setAttribute('style','background-color:white');
+            // todo.setAttribute('style','display:none !important');
         }else{
-            todo.setAttribute('style','display:block');
+            console.log('1=',todoTitle,'2=',filterValue)
+            todo.setAttribute('style','background-color:yellow');
         }
     })
 }
