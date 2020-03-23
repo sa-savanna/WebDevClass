@@ -82,24 +82,15 @@ function removeElement(event) {
 }
 
 function addToDo(e) {
-    let temp =[];
     if (e.target.className == 'btn btn-danger') {
         var todoValue = todoInput.value;
-        var _date = date.value;
-        
         var newTodo = spaceRemover(todoValue);
         if (newTodo === "" || newTodo === " " || newTodo === null) {
             displayMessage('danger', 'Please Enter a Todo!');
         } else {
-            temp.push({
-                title:todoValue,
-                date:_date
-            });
             displayMessage('success', 'Todo has been added!');
-           // makeTodo(todoValue);
+            makeTodo(todoValue);
             addToArray(todoValue);
-            testTodo(temp);
-            
           
         }
 
@@ -115,6 +106,7 @@ function addToDo(e) {
                             <a href = "#" class ="delete-item">
                                 <i class = "fa fa-remove"></i>
                             </a>
+
                         </li>
                        -->
 */
@@ -134,24 +126,7 @@ function makeTodo(newTodo) {
     console.log(listItem);
 }
 
-function testTodo(todos){
-    todos.forEach(function(todo,index){
-        const listItem = CreateElement('li');
-        listItem.className = "list-group-item d-flex justify-content-between"
-        const link = CreateElement('a');
-        link.href = "#"
-        link.className = "delete-item"
-        link.innerHTML = "<i class = 'fa fa-remove'></i>"
-        listItem.appendChild(document.createTextNode(todo.title + " - " + todo.date))
-        listItem.appendChild(link);
-    
-        todoList.appendChild(listItem)
-    var output = `
-    <span>${todo.title}</span><span> - ${todo.date}</span>
-    `;
-    console.log(output);
-    });
-}
+
 
 function displayMessage(type, message) {
 
