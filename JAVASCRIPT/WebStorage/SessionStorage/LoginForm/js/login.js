@@ -14,7 +14,7 @@ function checkAuth(event){
     if(typeof(Storage)!== 'undefined'){
         if(sessionStorage.user == username.value && sessionStorage.pass == password.value){
             // alert('username and password are correct!');
-            location.href="dashboard.html"
+            location.href="dashboard.html";
         }else{
             // alert('username or password are incorrect.');
             // var newUser = prompt('Please Enter a Username');
@@ -24,6 +24,11 @@ function checkAuth(event){
             // location.reload(); // refresh page [F5]
         }
     }
+    event.preventDefault();
 }
 
 // LOGIN PAGE
+
+var expireDate = new Date(2020,2,25);
+
+document.cookie=`name=Atilla; expires=${expireDate.toUTCString()}`
