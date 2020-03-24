@@ -1,3 +1,5 @@
+// DASHBOARD
+
 const greeting = document.querySelector('.welcomeUser');
 const logout = document.querySelector('.logout');
 

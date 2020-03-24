@@ -25,3 +25,5 @@ function checkAuth(event){
         }
     }
 }
+
+// LOGIN PAGE
