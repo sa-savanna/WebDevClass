@@ -18,6 +18,9 @@ form.addEventListener('click',function(event){
         
         localStorage.setItem('todos',JSON.stringify(todos));
         console.log(todos)
+        
+
+        
 
 
     }
@@ -34,6 +37,10 @@ step3- setItem('todos',updated_Todo)
 */
 
 
+
+var newObj = [1,2,3,4,5,6]
+
+console.log(newObj.toString())
 
 
 
