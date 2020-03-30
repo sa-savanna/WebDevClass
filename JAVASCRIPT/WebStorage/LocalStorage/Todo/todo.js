@@ -42,11 +42,13 @@ var newObj = [1,2,3,4,5,6]
 
 console.log(newObj.toString())
 
+// [1,2,3,4,5] to array json.parse
+/*
+[]
+[{}]
+[[{}],[{}]]
 
-
-
-
-
+*/
 
 
 
