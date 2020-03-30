@@ -32,3 +32,49 @@ const newCalc = {
 var res = newCalc.d0.apply('',[6,9]); // array
 console.log(res);
 
+
+const StudentManagement = {
+    addUser:function(firstname,lastname,age,location,scores){
+        var output = `Fullname: ${this.firstname} ${this.lastname}\nAge:${this.age}\nLocation:${this.location}\nScores:${this.scores}`
+        console.log(output)
+    }
+}
+
+var student1 = {
+    firstname:'Jack',
+    lastname:'Michael',
+    age:29,
+    location:'Brussel',
+    scores:[44,77,88,99]
+}
+
+var result = StudentManagement.addUser.apply(student1);
+
+
+
+
+// spread operator
+// "..."
+
+var number1=[1,2,3,4,5,6]
+var number2=[7,8,9];
+var resx = [...number1,...number2]
+// var resx = number1.concat(number2);
+console.log(resx)
+
+
+let arr1= ['student1','student2'];
+let arr2 = ['student3','student4'];
+arr1.push(...arr2);
+console.log(arr1)
+
+
+
+
+
+
+
+
+
+
+
