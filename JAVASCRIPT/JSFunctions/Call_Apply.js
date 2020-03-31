@@ -70,7 +70,21 @@ console.log(arr1)
 
 
 
+const tools = {
+    generate:function(){return document.createElement(this.tag)},
+    getdata:function(){return JSON.parse(localStorage.getItem(this.movies))}
+}
 
+var data = {
+    tag:'div',
+    movies:'movies'
+}
+
+var resxx = tools.getdata.call(data);
+console.log(resxx)
+
+var data = tools.getdata('movies')
+console.log(data)
 
 
 
