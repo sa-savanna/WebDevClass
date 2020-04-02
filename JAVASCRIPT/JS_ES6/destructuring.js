@@ -70,3 +70,18 @@ const obj = {
 
 const {a:num1,b:num2,c:num3,d:num4} = obj;
 console.log(num1,num2,num3,num4)
+
+
+const meta = {
+    title: 'INTECBRUSSEL',
+    students: [
+      {
+        firstname: 'Jack',
+        lastname: 'Michael'
+      }
+    ],
+    course: {
+      name: 'Javascript',
+      module: 'ECMAScriptv6'
+    }
+  };
