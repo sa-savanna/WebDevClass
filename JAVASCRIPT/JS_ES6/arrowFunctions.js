@@ -50,3 +50,9 @@ users.forEach(user => {
     htmlGenerator(user)
 })
 
+users.map((user)=>{
+    const {...rest} = user
+    console.log(rest);
+});
+
+
