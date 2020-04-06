@@ -81,4 +81,3 @@ books.clear();
 console.log(books);
 
 
-// result = arr.indexOf(100) !== -1 // true/false
