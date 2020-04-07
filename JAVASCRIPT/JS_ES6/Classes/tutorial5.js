@@ -88,3 +88,42 @@
 
 // User.myMethod();
 
+const result = document.querySelector('.result');
+const calcIt = document.querySelector('.calcit');
+const inputs = document.querySelectorAll('.numpad');
+
+
+class Calculator {
+
+    getVal(val) {
+        result.value += val
+
+    }
+
+    calcIt() {
+        let a = result.value // eval("1+1") => 2  2+4
+        let b = eval(a); // 2+4
+        result.value = b;
+        console.log(b)
+    }
+
+}
+
+
+let calc = new Calculator();
+
+
+// event listeners
+calcIt.addEventListener('click', function (e) {
+    calc.calcIt();
+
+})
+
+inputs.forEach((input) => {
+    input.addEventListener('click', function (e) {
+        calc.getVal(input.value)
+        console.log(input)
+        e.preventDefault();
+    })
+
+})
