@@ -1,6 +1,6 @@
 const cardCol = document.querySelector('.card-columns')
 const buttons = document.querySelectorAll('button');
-const [get] = buttons;
+const [get,_post] = buttons;
 const API_Url = "http://localhost:5005/comments";
 console.log(buttons)
 class Request { 
@@ -8,6 +8,7 @@ class Request {
     constructor(){
         this.xhr = new XMLHttpRequest();
     }
+
 
     // GET REQUEST
 
@@ -23,8 +24,20 @@ class Request {
         this.xhr.send();
     }
 
-    post(){
+    post(api,data,callback){
+        this.xhr.open('POST',api);
+        this.xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        this.xhr.onload= ()=>{
+            if(this.xhr===201){
+                // ok
+                callback(null,this.xhr.responseText)
+            }else{
+                // error
+                callback('post request failed',null);
+            }
+        }
 
+        this.xhr.send(JSON.stringify(data));
     }
 
     delete(){
@@ -59,6 +72,25 @@ get.addEventListener('click',function(e){
             console.log(typeof localData)
         }else{
             // ERror
+            console.log(err)
+        }
+    })
+    e.preventDefault()
+})
+
+let data = {
+    "postId": 1,
+    "id": 12,
+    "name": "intecbrussel",
+    "email": "intec@garfield.biz",
+    "body": "hello world."
+  }
+_post.addEventListener('click',function(e){
+    req.post(API_Url,data,function(err,comment){
+        if(err === null){
+            console.log(comment)
+        }else{
+            // error
             console.log(err)
         }
     })
