@@ -38,11 +38,11 @@ getUser(function(err,user){
             getReport(acc,function(err,report){
                 SendStatistics(report,function(e){
                     //
-                })
-            })
-        })
-    })
-})
+                });
+            });
+        });
+    });
+});
 
 // Promise - ES6
 getUser()
@@ -99,4 +99,3 @@ let getAllPosts = ()=>{
 }
 
 addPost(getAllPosts);
-
