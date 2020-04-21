@@ -1,6 +1,6 @@
 const cardCol = document.querySelector('.card-columns')
 const buttons = document.querySelectorAll('button');
-const [get,_post] = buttons;
+const [get,_post,_del] = buttons;
 const API_Url = "http://localhost:5005/comments";
 console.log(buttons)
 class Request { 
@@ -40,8 +40,18 @@ class Request {
         this.xhr.send(JSON.stringify(data));
     }
 
-    delete(){
+    delete(api,callback){
 
+        this.xhr.open("DELETE",api);
+        this.xhr.onload=()=>{
+            if(this.xhr.status===200){
+                callback(null,"deleted")
+            }else{
+                callback('fail',null)
+            }
+        }
+
+        this.xhr.send();
     }
 
     update(){
@@ -85,6 +95,7 @@ let data = {
     "email": "intec@garfield.biz",
     "body": "hello world."
   }
+
 _post.addEventListener('click',function(e){
     req.post(API_Url,data,function(err,comment){
         if(err === null){
@@ -95,4 +106,17 @@ _post.addEventListener('click',function(e){
         }
     })
     e.preventDefault()
+})
+
+_del.addEventListener('click',function(e){
+   let url = API_Url+"/203";
+   req.delete(url,function(err,res){
+       if(err === null){
+           console.log("Response: "+res)
+       }else{
+           console.log("Error: "+ err)
+       }
+   })
+    e.preventDefault()
+    console.log('test')
 })
