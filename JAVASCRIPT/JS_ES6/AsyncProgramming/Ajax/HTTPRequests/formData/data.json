@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "user": "aasd",
+      "email": "asdasd@asdasd.com",
+      "pwd": "asdadad",
+      "id": 1
+    },
+    {
+      "user": "asdasdasd",
+      "email": "r00tsec@ya.ru",
+      "pwd": "test",
+      "id": 2
+    },
+    {
+      "user": "intecbrussel",
+      "email": "atilla.balin@intecbrussel.be",
+      "pwd": "test123",
+      "id": 3
+    }
+  ]
+}
