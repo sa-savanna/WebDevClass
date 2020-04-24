@@ -108,3 +108,34 @@ body {
     top: 13px;
     height: 18px;
 }
+
+.bg-image {
+    background: url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/2m19ZVH0NfL74ypgXVWpbYcsPrX.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 22.5vw;
+    padding: 1.25rem;
+    background: url(https://image.tmdb.org/t/p/w600_and_h900_bestv2/8ttujmUP171eCAx41gumaIKjCzH.jpg);
+    /* -webkit-background-size: cover; */
+    -moz-background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
+    background-position: center;
+    background-size: contain;
+    /* object-fit: cover; */
+    -o-background-size: cover;
+    background-position: center;
+}
+
+.display-2, .imdb,.lead {
+    text-shadow: 5px 1px 2px #020101;
+    font-weight: 500 !important;
+
+}
