@@ -81,7 +81,15 @@ class Request {
 
 const req = new Request();
 
+
+
+
+const getCurrentUser =(userID)=>{
+    return userID
+}
+
 get.addEventListener('click', function (e) {
+    cardCol.innerHTML=""
     req.get(API_Url, function (err, response) {
         if (err === null) {
             let localData = JSON.parse(response);
@@ -91,16 +99,42 @@ get.addEventListener('click', function (e) {
             <div class="card">
                     <img class="card-img-top" src="holder.js/100x180/" alt="">
                     <div class="card-body">
-
+                    <input id="number" type="hidden" value="${comment.id}">
                     <h4 class="card-title">${comment.email}</h4>
                       <p class="card-text">${comment.body}</p>
                     </div>
-                    
+                    <button type="button" class="btn btn-primary updatebtn" data-toggle="modal" data-target="#exampleModal"
+          data-whatever="@getbootstrap">UPDATE</button>
                   </div>
             `
             })
             // success request
 
+            document.querySelectorAll('.updatebtn').forEach((button)=>{
+                button.addEventListener('click',function(e){
+
+                    
+             let userID = getCurrentUser(e.target.previousElementSibling.children[0].value);
+             sendUpdate.children[1].addEventListener('click',function(e){
+                 let temp = {
+                     id:userID,
+                     email:title.value,
+                     body:body.value
+                 }
+                 console.log(`${API_Url}/${userID}`)
+                 req.update(`${API_Url}/${userID}`,temp,function(err,comment){
+                     if(err === null){
+                         // success
+
+                         console.log(comment)
+                     }else{
+                         console.log(err)
+                     }
+                 })
+             })
+                    
+                })
+            })
 
 
         } else {
@@ -108,7 +142,7 @@ get.addEventListener('click', function (e) {
             console.log(err)
         }
     })
-    e.preventDefault()
+    
 })
 
 let data = {
