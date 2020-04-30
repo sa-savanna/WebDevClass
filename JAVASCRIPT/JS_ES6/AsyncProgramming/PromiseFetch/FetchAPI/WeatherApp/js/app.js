@@ -47,7 +47,10 @@ class WeatherApp {
                 return response.json()
             })
             .then((data) => {
-                console.log(data)
+                console.log(data.message)
+                if(data.message === "city not found"){
+                    alert('City not found! Try Again')
+                }
                 city.innerHTML = data.name
                 // desc
                 let weather = data.weather[0]
