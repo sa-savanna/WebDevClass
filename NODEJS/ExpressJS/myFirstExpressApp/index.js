@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const myRouters = require('./routes');
 const bodyParser = require('body-parser')
+const path = require('path')
 /*
 app.listen(port,host,callback)
 
 */
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 // middleware
@@ -13,7 +15,8 @@ function checkAuth(req,res,next){
     console.log('session is valid');
     next();
 }
-
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','hbs');
 app.use(checkAuth);
 
 // routes

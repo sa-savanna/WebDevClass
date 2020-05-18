@@ -2,24 +2,28 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
     res.send('homepage')
 })
 
-router.get('/blog',(req,res)=>{
-    res.send('blog page')
+let welcomeMsg = "Welcome to my Blog!"
+
+router.get('/blog', (req, res) => {
+    //res.send('blog page')
+    res.render('index',{welcomeMsg:welcomeMsg})
 })
 
-router.get('/contact',(req,res)=>{
-    res.send('contact page')
+let contactTitle =  "CONTACT PAGE"
+router.get('/contact', (req, res) => {
+
+    res.render('contact',"hello world")
+    
 })
 
-router.post('/add',(req,res)=>{
+router.post('/add', (req, res) => {
     console.log(req.body)
 
     /*
-
-
 
     */
     res.send('added.')
@@ -28,3 +32,5 @@ router.post('/add',(req,res)=>{
 
 
 module.exports = router;
+
+
