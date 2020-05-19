@@ -1,0 +1,19 @@
+<% include header %>
+<div class="container">
+  <% include menu %>
+  <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    
+    <h2><%= desc %></h2>
+    <hr>
+
+    <% for(let i=1; i<=10;i++){%>
+      <%= i %>
+      <% } %>
+      <hr>
+      <!--Iterate Array in EJS -->
+        <% data.forEach(function(user){%>
+          <%=user.username%>
+        <%})%>
+</div>
+<% include footer %>
