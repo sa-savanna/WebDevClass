@@ -25,4 +25,12 @@ router.get('/blog',function(req,res,next){
   res.render('blog', {title:'Welcome to my blog'})
 })
 
+router.post('/blog/add',function(req,res){
+  let getFormData =  {
+    title: req.body.title,
+    content: req.body.content
+  }
+  console.log(getFormData)
+})
+
 module.exports = router;
