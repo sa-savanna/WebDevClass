@@ -1,0 +1,12 @@
+* ejs template
+    - home
+    - blog
+        * post listing
+        * readme link
+        * post_detail
+            * post_meta_info (date, created_date)
+    - online tools
+        * encoder-decoder tool
+        * whois tool
+        * ping sender
+    - contact
