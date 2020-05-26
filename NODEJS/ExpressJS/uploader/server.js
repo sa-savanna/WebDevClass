@@ -13,17 +13,46 @@ const storage = multer.diskStorage({
         callback(null,`${__dirname}/uploads`)
     },
     filename:(req,file,callback)=>{
-        callback(null,file.originalname)
+
+        // mimetypes
+        var extension = {
+            'image/jpeg':'.jpg',
+            'image/png':'.png',
+            'image/gif':'.gif'
+        }
+
+        if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/gif'){
+            // file.originalname.substr(0,file.originalname.length-4)
+            let output = 'image-' + Date.now() + extension[file.mimetype] // .jpg .png .gif
+            // image-4384784348734
+            callback(null,output)
+        }else{
+            console.log('This mimetype is not allowed')
+        }
+
+        
+
+ // oskjdkjasdiasiodoaisdahjdihnasduasuidauisdhuiashduhauisdhuasduhuaisdhasd.jpg
+ // image-timestampformate
+ // image-4347878374.jpg
+        
     }
 });
 
-var upload = multer({storage:storage}).single('currentFile')
+var upload = multer(
+    {
+        storage:storage,
+        limits: { fileSize: 1024000 }
+    },
+    
+    ).single('currentFile')
 
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/index.html')
 })
 
 app.post('/upload',(req,res)=>{
+
     upload(req,res,function(err){
         if(err){
             console.log(err)
