@@ -3,7 +3,6 @@ var router = express.Router();
 const fetch = require('node-fetch')
 const aes256 = require('aes256')
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: '' });
@@ -39,9 +38,11 @@ router.post('/tools/encode',(req,res)=>{
 })
 
 router.post('/tools/decode',(req,res)=>{
-  var decrypted = aes256.decode(req.body.secretkey, req.body.message);
+  var decrypted = aes256.decrypt(req.body.secretkey, req.body.message);
+ 
   res.send(decrypted)
 })
+
 
 
 
