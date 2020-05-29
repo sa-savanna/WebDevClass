@@ -3,7 +3,14 @@ const router = express.Router();
 const Post = require('../models/Post')
 
 router.get('/',(req,res)=>{
-    res.send('Posts are listing here...')
+    Post.find({},(err,result)=>{
+        if(err){
+            res.send(err)
+        }else{
+            res.send(result)
+        }
+    })
+   
 })
 
 router.post('/',(req,res)=>{
