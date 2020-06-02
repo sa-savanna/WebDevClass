@@ -1,51 +1,35 @@
-var express = require('express');
-var router = express.Router();
-const fetch = require('node-fetch')
-const aes256 = require('aes256')
+const express = require('express')
+const routing = require('./routing')
+const passport = require('passport');
+const User = require('../models/user')
+const article = require('./article')
+require('../passport-config')
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: '' });
-});
-
-
-// BLOG
-router.get('/blog', async function(req,res, next){
-  let response = await fetch('https://jsonplaceholder.typicode.com/posts');
-  let posts = await response.json();
-  res.render('blog',{posts:posts})
-})
-
-router.get('/blog/:id', async(req,res,next)=>{
- // let getPostID = req.params.id;
-  let response = await fetch('https://jsonplaceholder.typicode.com/posts/'+req.params.id);
-  let singlePost = await response.json()
-  // res.status(200).json({ response: response })
-  res.render('post_detail',{singlePost:singlePost})
-
+router.get('/',(req,res,next)=>{
+  res.redirect('/home')
 })
 
 
-// ONLINE TOOLS PAGE
-router.get('/tools',function(req,res,next){
-  res.render('tools',{})
+router.get('/login',(req,res,next)=>{
+  const erros = req.flash().error || [];
+  res.render('login')
 })
 
+router.post('/login', passport.authenticate('local', {
+successRedirect: '/home/blog',
+failureRedirect: '/home/login',
+failureFlash: true  //Allow displaying a msg to the user 
+}))
 
-router.post('/tools/encode',(req,res)=>{
-  var encrypted = aes256.encrypt(req.body.secretkey, req.body.message);
-  res.send(encrypted)
-})
+const ensureAuthenticated = (req,res,next)=>{
+  if(req.isAuthenticated()){
+      return next();
+  }
+  res.redirect('/home/login')
+}
 
-router.post('/tools/decode',(req,res)=>{
-  var decrypted = aes256.decrypt(req.body.secretkey, req.body.message);
- 
-  res.send(decrypted)
-})
+router.use('/home', routing)
+router.use('/home/article',ensureAuthenticated,article)
 
-
-
-
-
-
-module.exports = router;
+module.exports=router;
