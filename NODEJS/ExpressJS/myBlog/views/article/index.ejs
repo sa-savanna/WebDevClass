@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<% if (articles.length > 0) { %>
+<div>
+    <div class="card">
+      <div class="card-header">
+        articles
+          <div class="pull-right">
+            <a href="/articles/create" class="btn" role="button">Create</a>
+          </div>
+      </div>
+      <div class="card-block">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Desc</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < articles.length; i++) { %>
+                <tr>
+                    <td><%= articles[i].title %></td>
+                    <td><%= articles[i].desc %></td>
+                    <td><%= articles[i].image %></td>
+                    <td>
+                        <a href="/home/article/view/<%= articles[i]._id%>"><i class="fa fa-list" aria-hidden="true"></i></a> &nbsp;|
+                        <a href="/home/article/edit/<%= articles[i]._id%>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> &nbsp;|
+                        <a href="/home/article/delete/<%= articles[i]._id%>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+<% } else { %>
+<div>No articles found.</div>
+<% } %>
+<% include ../partials/footer %>

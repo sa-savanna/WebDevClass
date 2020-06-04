@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "admin",
+      "comment": "Lorem Ipsum",
+      "commentDate": "2020-01-01"
+    },
+    {
+      "id": 2,
+      "username": "Anna",
+      "comment": "This is first comment",
+      "commentDate": "2020-02-01"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<hr class="bg-secondary">
+<div class="container-fluid p-5">
+    <% posts.forEach(function(post){ %>
+        <div class="post-container">
+            <span class="published">
+              <span class="date">
+                Apr 5
+              </span>
+              <span class="year">
+                2014
+              </span>
+            </span>
+            <div class="post">
+              <h1><%= post.title %></h1>
+              <img src="https://loremflickr.com/320/240?lock=" />
+        
+              <p><%= post.body %></p>
+              <a name="" id="" class="btn btn-primary" href="/home/blog/<%= post.id %>" role="button">Read More</a>
+            </div>
+          </div>
+          <hr class="bg-secondary">
+            
+        <% }); %>
+
+</div>
+
+
+<hr class="bg-secondary">
