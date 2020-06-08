@@ -1,0 +1,13 @@
+$myColor: red;
+
+h1 {
+  color: $myColor;
+}
+
+.className {
+    .className1{
+        .className2{
+            text-color: $myColor;
+        }
+    }
+}
