@@ -1,3 +1,7 @@
 /node_modules
 /myFirstExpressApp/node_modules
 /intecbrussel/node_modules
+/query_and_params/node_modules
+/uploader/node_modules
+/myBlog/node_modules
+/**/node_modules

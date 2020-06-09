@@ -22,6 +22,11 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: true  //Allow displaying a msg to the user 
 }))
 
+router.get('/logout',(req,res)=>{
+  req.logOut();
+  res.redirect('/')
+})
+
 // //Fetching all the users
 // router.get('/users', async (req, res, next) =>{
 //   const users = await User.find()
